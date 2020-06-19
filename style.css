@@ -17,7 +17,7 @@ Version: 1.2.0
 @media screen and (min-width: 993px){
     table.shop_table_responsive.woocommerce-cart-form__contents tr td{ vertical-align: top}
 }
-body.woocommerce-cart del{
+body.woocommerce-cart del, body.woocommerce-checkout del{
     opacity: .8;
     font-size: 0.90em;
     color: #666;
