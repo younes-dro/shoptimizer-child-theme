@@ -1,0 +1,19 @@
+/*
+Theme Name: Shoptimizer Child Theme
+Theme URI: 
+Description: Child theme of Shoptimizer
+Author: CommerceGurus
+Author URI: 
+Template: shoptimizer
+Version: 1.2.0
+*/
+
+@import url('../shoptimizer/style.css');
+ .woocommerce-shipping-calculator a.shipping-calculator-button{
+    display: none!important;
+            }
+.entry-content:not(.wc-tab) p.woocommerce-shipping-destination{ display: none!important}
+
+@media screen and (min-width: 993px){
+    table.shop_table_responsive.woocommerce-cart-form__contents tr td{ vertical-align: top}
+}
