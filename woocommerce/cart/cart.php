@@ -124,6 +124,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
 							<?php
+                                                                echo oas_discount_price_cart ( $_product  , $cart_item['quantity']);
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
 						</td>

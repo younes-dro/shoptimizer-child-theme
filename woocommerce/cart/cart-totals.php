@@ -93,10 +93,19 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
-
+                <tr class="order-total">
+                    <?php if ( oas_saved_price () ): ?>
+                    <th><?php esc_html_e( 'You save', 'woocommerce'); ?></th>
+                    <td><p class="oas-saved"><?php echo oas_saved_price (); ?></p></td>
+                    <?php endif; ?>                                    
+                </tr>
 		<tr class="order-total">
 			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
+                            <?php 
+                            wc_cart_totals_order_total_html(); 
+                            ?>
+                        </td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

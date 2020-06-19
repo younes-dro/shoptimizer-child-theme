@@ -15,3 +15,5 @@ function shoptimizer_child_enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'shoptimizer_child_enqueue_scripts', 99 );
+
+require 'inc/oas-woocommerce-template-functions.php';
