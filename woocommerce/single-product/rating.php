@@ -31,7 +31,12 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-	<div class="woocommerce-product-rating">
+	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="woocommerce-product-rating">
+            <span style="display:none">
+            <span itemprop="ratingCount"><?php echo $average ?></span>
+            <span itemprop="ratingValue"><?php echo $review_count?></span>
+            <span itemprop="bestRating"><?php echo $average ?></span>
+            </span>
 		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
 		<?php if ( comments_open() ) : ?>
 			<?php //phpcs:disable ?>
@@ -41,3 +46,8 @@ if ( $rating_count > 0 ) : ?>
 	</div>
 
 <?php endif; ?>
+
+    
+    out of 
+    based on  user ratings
+  </div>

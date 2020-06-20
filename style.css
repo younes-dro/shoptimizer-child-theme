@@ -29,3 +29,6 @@ body.woocommerce-cart del, body.woocommerce-checkout del{
     margin: 0;
     color: #837d7d;
 }
+div.osp-marque-container{
+    display: flex;
+}

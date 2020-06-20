@@ -7,6 +7,8 @@
  * @package shoptimizer
  */
 
+if ( is_product() ) $itemscope = 'itemscope itemtype="http://schema.org/Product"';
+
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,7 +25,7 @@
 
 <?php do_action( 'shoptimizer_before' ); ?>
 
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site" <?=( isset ($itemscope ) ) ? $itemscope : ''?> >
 
 	<?php
 	do_action( 'shoptimizer_before_site' );

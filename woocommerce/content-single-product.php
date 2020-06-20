@@ -31,8 +31,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-
+<div itemscope itemtype="http://schema.org/IndividualProduct" itemid="#product" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -43,7 +42,7 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
+    <div class="summary entry-summary">
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
