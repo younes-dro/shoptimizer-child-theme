@@ -16,4 +16,15 @@ function shoptimizer_child_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'shoptimizer_child_enqueue_scripts', 99 );
 
+add_filter( 'woocommerce_get_breadcrumb', 'ed_change_breadcrumb' );
+
+function ed_change_breadcrumb( $breadcrumb ) {
+	
+  if(is_singular()){
+		array_pop($breadcrumb);
+	}
+  
+  return $breadcrumb;
+}
+
 require 'inc/oas-woocommerce-template-functions.php';
