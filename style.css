@@ -54,3 +54,12 @@ body.woocommerce-cart del, body.woocommerce-checkout del{
 div.osp-marque-container{
     display: flex;
 }
+
+/************ Custom desgin wigdet rated and recently produts **/
+#secondary .product_list_widget li img{
+    float: none!important;
+    max-width: 10.617924em!important;
+    /*border-radius: 12px;*/
+}
+
+/*********** Reduce the Width of dropdawn menu in cart page ****/
