@@ -99,12 +99,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
-                <tr class="order-total">
-                    <?php if ( oas_saved_price () ): ?>
-                    <th><?php esc_html_e( 'You save', 'woocommerce'); ?></th>
-                    <td><p class="oas-saved"><?php echo oas_saved_price (); ?></p></td>
-                    <?php endif; ?>                                    
-                </tr>
+
 		<tr class="order-total">
 			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
