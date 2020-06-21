@@ -27,7 +27,29 @@ body.woocommerce-cart del, body.woocommerce-checkout del{
 .oas-saved{
     font-size: 14px;
     margin: 0;
-    color: #837d7d;
+    color: #000000;
+    /*border: 1px solid;*/
+    /* text-align: right; */
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-weight: 800;
+    background-image: url(icons/save-money.png);
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.oas-saved span.save-text{
+    display: inline-block;
+    padding-right: 5px;
+    text-decoration: underline;
+}
+.oas-saved span.save-price{
+    font-size: 1.5rem;
 }
 div.osp-marque-container{
     display: flex;

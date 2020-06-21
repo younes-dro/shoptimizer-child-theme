@@ -101,20 +101,21 @@ defined( 'ABSPATH' ) || exit;
                             ?>
                         </td>
 		</tr>
-                <?php if ( oas_saved_price () ): ?>
-		<tr class="order-total">
-                    
-                    <td>&nbsp;</td>
-                    <td>
-                        <p style="" class="oas-saved"><?php esc_html_e( 'You save', 'woocommerce'); ?><?php echo oas_saved_price (); ?></p>
-                    </td>
-                                                       
-                </tr>    
-                <?php endif; ?> 
+
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
 	</table>
+                <?php if ( oas_saved_price () ): ?>
+
+                        <p style="" class="oas-saved">
+                            <span class="save-text"><?php esc_html_e( 'You save', 'woocommerce'); ?></span>
+                            <span class="save-price"><?php echo oas_saved_price (); ?></span>
+                        </p>
+                   
+                                                       
+                    
+                <?php endif; ?>         
 
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>

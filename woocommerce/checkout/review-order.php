@@ -106,6 +106,14 @@ defined( 'ABSPATH' ) || exit;
 		</tr>
 
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
+                               
 
 	</tfoot>
+
 </table>
+                    <?php if ( oas_saved_price () ): ?>
+                       <p class="oas-saved">
+                        <span class="save-text"><?php esc_html_e( 'You save', 'woocommerce'); ?></span>
+                        <span class="save-price"><?php echo oas_saved_price (); ?></span>
+                       </p>
+                    <?php endif; ?> 
