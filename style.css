@@ -62,4 +62,8 @@ div.osp-marque-container{
     /*border-radius: 12px;*/
 }
 
-/*********** Reduce the Width of dropdawn menu in cart page ****/
+/*********** size chart in product page  **/
+body.single .summary .button-wrapper.shoptimizer-size-guide {
+display: block!important;
+float: none;
+}
