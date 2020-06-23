@@ -67,3 +67,9 @@ body.single .summary .button-wrapper.shoptimizer-size-guide {
 display: block!important;
 float: none;
 }
+/********* remove the percentage discount from the products list *****/
+body.archive ul.products li.product .product-label,
+body.home ul.products li.product .product-label{
+    display: none!important;
+}
+
